@@ -278,8 +278,9 @@ hr.small {
 .label-text{
   color: #337ab7;
 }
-
-
+.project-four-subtext {
+  font-size: 12px;
+}
 
 
 /* Portfolio */
