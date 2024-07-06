@@ -353,7 +353,8 @@ footer {
 
 .heart_rate_zones {
   display: flex;
-  background-color: whitesmoke;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   padding: 5px;
 }
