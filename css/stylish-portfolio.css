@@ -355,11 +355,15 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   border-radius: 5px;
-  padding: 5px;
 }
 
 .zones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   border-radius: 2px;
 }
 
