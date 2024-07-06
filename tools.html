@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal Portfolio">
+    <meta name="author" content="Bryan Otsuka">
+
+    <title>Bryan Otsuka</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li class="sidebar-brand">
+          <a href="#top" onclick=$("#menu-close").click();>Welcome!</a>
+        </li>
+        <li>
+          <a href="index.html" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+          <a href="index.html#about" onclick=$("#menu-close").click();>About</a>
+        </li>
+
+        <li>
+          <a href="index.html#skills" onclick=$("#menu-close").click();>Skills</a>
+        </li>
+        <li>
+          <a href="index.html#projects" onclick=$("#menu-close").click();>Projects</a>
+        </li>
+        <li>
+          <a href="#top" onclick=$("#menu-close").click();>Tools</a>
+        </li>
+        <li>
+          <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="tools_header">
+      <div class="text-vertical-center">
+        <a href="#tools">
+          <i class="fa fa-wrench fa-spin fa-5x" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- Tools -->
+    <section id="tools" class="tools">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1 text-center">
+            <h2>No Ads, No BS</h2>
+            <hr class="small">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="project-item">
+                  <!--Content-->
+                  <div class="card-overlay"
+                    style="background-image: url('https://mdbootstrap.com/img/Photos/Others/img%20(14).jpg')">
+                    <h5><i class="fa fa-desktop"></i> Software</h5>
+                    <h3>Heart Rate Zones Calculator</h3>
+                    <p>Discover your heart rate zones using the Karvonen Formula</p>
+                    <a href="#modal" data-toggle="modal" data-target="#modal"
+                      class="btn btn-lg btn-outline-white project-action"><i class="fa fa-clone"></i>
+                      Calculate</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--MODAL-->
+    <div class="modal fade" id="modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Heart Rate Zones Calculator</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group row">
+                <label for="maxHeartRate" class="col-sm-2 col-form-label">MHR:</label>
+                <div class="col-sm-10">
+                  <input type="number" onkeypress="if (this.value.length > 2) return false;" class="form-control"
+                    id="maxHeartRate" placeholder="Max Heart Rate">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="restingHeartRate" class="col-sm-2 col-form-label">RHR:</label>
+                <div class="col-sm-10">
+                  <input type="number" onkeypress="if (this.value.length > 2) return false;" class="form-control"
+                    id="restingHeartRate" placeholder="Resting Heart Rate">
+                </div>
+              </div>
+            </form>
+            <div class="heart_rate_zones">
+              <label for="heartRateZones" class="col-sm-2 col-form-label">Zones:</label>
+              <div class="col-sm-2 zones zone1">
+                <h3>Zone 1</h3>
+                <p>Warm Up</p>
+                <p id="zone1"></p>
+              </div>
+              <div class="col-sm-2 zones zone2">
+                <h3>Zone 2</h3>
+                <p>Fat Burn</p>
+                <p id="zone2"></p>
+              </div>
+              <div class="col-sm-2 zones zone3">
+                <h3>Zone 3</h3>
+                <p>Aerobic</p>
+                <p id="zone3"></p>
+              </div>
+              <div class="col-sm-2 zones zone4">
+                <h3>Zone 4</h3>
+                <p>Anaerobic</p>
+                <p id="zone4"></p>
+              </div>
+              <div class="col-sm-2 zones zone5">
+                <h3>Zone 5</h3>
+                <p>Vo2 Max</p>
+                <p id="zone5"></p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1 text-center">
+            <h4><strong>Bryan Otsuka</strong>
+            </h4>
+
+            <ul class="list-unstyled">
+              <!--<li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>-->
+              <li><i class="fa fa-envelope-o fa-fw"></i> <a
+                  href="mailto:otsukabryan@gmail.com">otsukabryan@gmail.com</a>
+              </li>
+            </ul>
+            <br>
+            <ul class="list-inline">
+              <li>
+                <a href="https://www.linkedin.com/in/bryan-otsuka/"><i
+                    class="fa fa-linkedin-square fa-fw fa-3x"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/Bryanide"><i class="fa fa-github fa-fw fa-3x"></i></a>
+              </li>
+              <li>
+                <a href="https://codepen.io/bryanide/"><i class="fa fa-codepen fa-fw fa-3x"></i></a>
+              </li>
+            </ul>
+            <hr class="small">
+            <p class="text-muted">Copyright &copy; Bryanide 2017</p>
+          </div>
+        </div>
+      </div>
+      <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <script src="js/waypoints.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.js"></script>
+
+  </body>
+
+</html>
